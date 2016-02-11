@@ -8,23 +8,7 @@ namespace LogStitcher
 {
     public class Program
     {
-        public static IEnumerable<string> ExpandFilePaths(string arg)
-        {
-            var substitutedArg = System.Environment.ExpandEnvironmentVariables(arg);
-
-            var dirPart = Path.GetDirectoryName(substitutedArg);
-            if (dirPart.Length == 0)
-                dirPart = ".";
-
-            var filePart = Path.GetFileName(substitutedArg);
-
-            foreach (var filepath in Directory.GetFiles(dirPart, filePart))
-            {
-                yield return filepath;
-            }
-        }
-
-        private static void Main(string[] args)
+        public static void Main(string[] args)
         {
             if (args == null || args.Length == 0)
             {
@@ -41,7 +25,21 @@ namespace LogStitcher
                 Console.WriteLine($"{line.SourceName} | {line.Text}");
             }
         }
+
+        private static IEnumerable<string> ExpandFilePaths(string arg)
+        {
+            var substitutedArg = System.Environment.ExpandEnvironmentVariables(arg);
+
+            var dirPart = Path.GetDirectoryName(substitutedArg);
+            if (dirPart.Length == 0)
+                dirPart = ".";
+
+            var filePart = Path.GetFileName(substitutedArg);
+
+            foreach (var filepath in Directory.GetFiles(dirPart, filePart))
+            {
+                yield return filepath;
+            }
+        }
     }
-
-
 }
