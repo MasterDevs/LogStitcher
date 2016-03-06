@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>LogStitcher.portable</id>
+    <title>LogStitcher</title>
+    <!-- Version is overwritten when the package is created -->
+    <version>0.0.1</version>
+    <authors>MasterDevs</authors>
+    <owners>MasterDevs</owners>
+    <summary>Stitches multiple logs together, interweaving entries to make them chronological</summary>
+    <description>Stitches multiple logs together, interweaving entries to make them chronological</description>
+    <tags>CommandLine Log logs utility</tags>
+    <copyright>Copyright 2016</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>       https://github.com/MasterDevs/LogStitcher                     </projectUrl>
+    <packageSourceUrl> https://github.com/MasterDevs/LogStitcher                     </packageSourceUrl>
+    <docsUrl>          https://github.com/MasterDevs/LogStitcher                     </docsUrl>
+    <projectSourceUrl> https://github.com/MasterDevs/LogStitcher                     </projectSourceUrl>
+    <bugTrackerUrl>    https://github.com/MasterDevs/LogStitcher/issues              </bugTrackerUrl>
+    <releaseNotes>     https://github.com/MasterDevs/LogStitcher/releases            </releaseNotes>
+    <licenseUrl>       https://github.com/MasterDevs/LogStitcher/blob/master/LICENSE </licenseUrl>
+<!-- Uncomment this line if you have an icon for your project
+    <iconUrl>          https://github.com/MasterDevs/LogStitcher/icon.jpg            </iconUrl>
+-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
