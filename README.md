@@ -16,6 +16,6 @@ TODO
 
 # Credits
 
-TidyJson uses the following projects:
+LogStitcher uses the following projects:
 
 * [MasterDevs.ChocolateyCoolWhip](https://github.com/MasterDevs/ChocolateyCoolWhip) to build and deploy to Chocolatey
