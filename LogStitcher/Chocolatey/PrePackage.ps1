@@ -26,7 +26,6 @@ Write-Host "Starting prepackage of version $version";
 #######################################
 Write-Host
 $templateDirectory = Get-ChildItem -Recurse -Directory -Include ToolsTemplates LogStitcher\Chocolatey
-
 $toolsDir = "$($templateDirectory.Parent.FullName)\Tools"
 write-host "Creating $toolsDir"
 $silent = New-Item -ItemType Directory -Force -Path $toolsDir
@@ -37,7 +36,8 @@ $silent = New-Item -ItemType Directory -Force -Path $toolsDir
 Write-Host
 Write-Host "Reading tokens"
 
-$tokenFile = $templateDirectory.EnumerateFiles().Where({$PSItem.Name -eq "Tokens.json";})[0]
+$tokenFile = $templateDirectory.Parent.EnumerateFiles().Where({$PSItem.Name -eq "Tokens.json";})[0]
+Write-Host "Found file $tokenFile"
 $json = Get-Content -Raw $tokenFile.FullName
 $tokens = ConvertFrom-Json $json
 Write-Host "Replacing tokens"
