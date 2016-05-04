@@ -10,9 +10,19 @@ TidyJson can be installed with [Chocolatey](https://chocolatey.org/)
     
     
 # Usage
-    Usage: logstitcher [OPTIONS]
+    Usage: logstitcher [File1] [File2] ...
 
-TODO
+## Example 1:  Stitch two files and print the result to stdin
+
+    logstitcher c:\logs\logFile1 c:\logs\logFile2
+    
+## Example 2:  Stitch all the .txt files in a directory and save the result to a file
+    
+    logstitcher c:\logs\*.txt > c:\logs\stitched.log
+    
+## Example 3:  Stitching with wild cards across multiple directories
+    
+    logstitcher c:\logs\directoryA\*.txt c:\logs\directoryB\*.txt 
 
 # Credits
 
