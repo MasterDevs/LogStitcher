@@ -9,8 +9,10 @@ TidyJson can be installed with [Chocolatey](https://chocolatey.org/)
     choco install logstitcher.portable
     
     
-# Usage
+# Usage and Examples
     Usage: logstitcher [File1] [File2] ...
+
+## Examples
 
 Example 1:  Stitch two files and print the result to stdin
 
