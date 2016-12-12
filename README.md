@@ -4,7 +4,7 @@
 Stitches multiple logs together, interweaving entries to make them chronological
 
 # Installation
-TidyJson can be installed with [Chocolatey](https://chocolatey.org/)
+LogStitcher can be installed with [Chocolatey](https://chocolatey.org/)
 
     choco install logstitcher.portable
     
